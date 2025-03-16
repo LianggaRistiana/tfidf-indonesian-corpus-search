@@ -50,7 +50,10 @@ if __name__ == "__main__":
         "Saya suka belajar pemrograman.",
         "Pemrograman dengan Python sangat menyenangkan.",
         "Belajar mesin pencari menggunakan TF-IDF.",
-        "TF-IDF digunakan untuk pencarian teks."
+        "TF-IDF digunakan untuk pencarian teks.",
+        "Pemrograman dengan Bahasa Indonesia.",
+        "Belajar Menggambar dengan Python.",
+        "Belajar Berenang di Kolam Renang.",
     ]
     
     query = "belajar pemrograman dengan TF-IDF"
@@ -58,5 +61,5 @@ if __name__ == "__main__":
     
     print("Query:", query)
     print("Hasil Pencarian:")
-    for score, doc in results:
-        print(f"Skor: {score:.4f} | Dokumen: {doc}")
+for i, (score, doc) in enumerate(results, start=1):  # Mulai rank dari 1
+    print(f"Rank: {i} | Skor: {score:.4f} | Dokumen: {doc}")
